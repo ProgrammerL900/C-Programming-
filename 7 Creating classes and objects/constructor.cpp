@@ -1,12 +1,11 @@
 /**
- * @file multiple.cpp
+ * @file constructor.cpp
  * @author your name (you@domain.com)
- * @brief Creating multiple objects pg 120
+ * @brief Initialzing class member pg 122
  * @version 0.1
- * @date 2022-06-21
- * @date 2024-05-3 (update)
+ * @date 2024-05-03
  * 
- * @copyright Copyright (c) 2022
+ * @copyright Copyright (c) 2024
  * 
  */
 
@@ -40,8 +39,14 @@ void setColor (string hue) {color = hue;}
 /* Replace three setter methods with
 * single combined setter protoype
 */
+/* replace setValue with constructor*/
 
-void setValue(int, int, string);
+//void setValue(int, int, string);
+
+Dog(int, int, string);
+
+/* associated destructor*/
+~Dog();
 
 /**
  * public getter methods 
@@ -55,32 +60,57 @@ string getColor() {return color;}
 
 };
 
+/* after dog class declaration 
+* replace setValues defintion with constructor block*/
+
+
 /** 
  *  after Dog class declaration 
  * add definition block for protype
  * 
  */
 
+
+/*
 void Dog::setValue(int age, int weight, string color)
+
 {
     /**
      * In method defintion 
      * add three statemets to assign
      * values from passed arguments to class variables
      */
-
+/*
  this -> age = age;
  this -> weight = weight;
  this -> color = color;
 }
+*/
+
+
+Dog::Dog(int age, int weight, string color) {
+  /*insert 3 statements to assign values from passed arguments
+  */
+ this -> age = age;
+ this -> weight = weight;
+ this -> color = color;  
+}
+
+/*add destructor block*/
+Dog::~Dog(){
+    /*statement to output confirmation*/
+    cout << "Object destroyed." << endl;
+}
+
 
 //main method  declared 
 
 int main() {
 
 //declare instance of Dog class
+//edit fido object
+Dog fido(3, 15, "brown");
 
-Dog fido;
 /* replace setter with single call to combined setter method
 
 //calls setter methods
@@ -90,13 +120,23 @@ fido.setWeight(15);
 fido.setColor("brown");
 */
 
-fido.setValue(3, 15, "brown");
+
+/*delete fido and pooch setValues*/
+
+//fido.setValue(3, 15, "brown");
 
 /* main method declare second instance*/
-Dog pooch;
+
+//Edit pooch statement
+Dog pooch(4, 18, "gray");
 
 /*add second call to combined setter method*/
-pooch.setValue(4, 18, "gray");
+
+/*delete fido and pooch setValues
+*constructor replaced method
+*/
+
+//pooch.setValue(4, 18, "gray");
 
 
 //calls getter methods 
@@ -115,10 +155,6 @@ cout << " pounds. ";
 
 pooch.bark();
 fido.bark();
+    
     return 0;
-
-
-
-
 }
-
