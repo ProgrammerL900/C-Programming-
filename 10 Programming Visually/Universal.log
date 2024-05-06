@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  App.xaml.cpp
+  MainPage.xaml.cpp
+  XamlTypeInfo.Impl.g.cpp
+  XamlTypeInfo.g.cpp
+     Creating library C:\Users\Laura\source\repos\Universal\Debug\Universal\Universal.lib and object C:\Users\Laura\source\repos\Universal\Debug\Universal\Universal.exp
+  Universal.vcxproj -> C:\Users\Laura\source\repos\Universal\Debug\Universal\Universal.exe
